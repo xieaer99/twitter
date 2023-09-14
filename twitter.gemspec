@@ -21,6 +21,19 @@ Gem::Specification.new do |spec|
   spec.licenses = %w[MIT]
   spec.metadata["rubygems_mfa_required"] = "true"
   spec.name = "twitter"
+  spec.post_install_message = %q{
+The Twitter Ruby gem is no longer maintained and will not support Twitter API v2.
+We recommend switching to the X gem, which supports API v2 as well as providing
+legacy support for v1.1, to ease the transition. The X gem is NOT a drop-in
+replacement for the Twitter gem. It will require updating your code, especially
+as it relates to API response objects. However, the X gem is designed to be
+maximally adaptable, so your code will require fewer changes in the future.
+
+See https://sferik.github.io/x-ruby/ for more details.
+
+We also ask that you (or your company) consider sponsoring the development and
+continued maintenance of the X gem at https://github.com/sponsors/sferik.
+}
   spec.require_paths = %w[lib]
   spec.required_ruby_version = ">= 3.0"
   spec.summary = spec.description
